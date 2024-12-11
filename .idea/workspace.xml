@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="817235fd-03bf-4149-bdde-627ea7d315a7" name="Changes" comment="Reinit project to new drive">
+      <change afterPath="$PROJECT_DIR$/.idea/LabelPrint.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SE Sink Configuration.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/events/se_sink_configuration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resource/label_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resource/sink_program_reference.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/header.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/header.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/label_user_inputs.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/label_user_inputs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/table.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/app_storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/app_storage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/events/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/events/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/events/location_breakdown.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/events/location_breakdown.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/work_history.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/sink_config_reports.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resource/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/resource/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/startup.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/startup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/authentication/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/authentication/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/authentication/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/authentication/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/authentication/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/authentication/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/authentication/test_authentication.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/authentication/test_authentication.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/generate_pdf/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/generate_pdf/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/generate_pdf/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/generate_pdf/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/generate_pdf/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/generate_pdf/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/menu_and_tabs/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/menu_and_tabs/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/modularization/api_router_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/modularization/api_router_example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/modularization/class_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/modularization/class_example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/modularization/function_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/modularization/function_example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/modularization/home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/modularization/home_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/modularization/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/modularization/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/modularization/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/modularization/menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/modularization/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/modularization/message.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/modularization/theme.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/modularization/theme.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/script_executor/hello.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/script_executor/hello.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/script_executor/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/script_executor/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/script_executor/slow.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/script_executor/slow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/table_and_slots/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/table_and_slots/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/trello_cards/draganddrop.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/trello_cards/draganddrop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/test/trello_cards/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/trello_cards/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/file_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/file_selector.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2pzjvEU2uIoMQyuU9IAavMC9y4g" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.label_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PycharmProjects\LabelPrint\app\resource" />
+      <recent name="D:\PycharmProjects\LabelPrint\app\events" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-fb887030ada0-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.21565.199" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="817235fd-03bf-4149-bdde-627ea7d315a7" name="Changes" comment="" />
+      <created>1733776027021</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733776027021</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Reinit project to new drive">
+      <option name="closed" value="true" />
+      <created>1733779600781</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733779600781</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Reinit project to new drive" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reinit project to new drive" />
+  </component>
+</project>

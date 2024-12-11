@@ -2,18 +2,24 @@ from nicegui import ui
 from .table import data_table
 from .label_user_inputs import  label_inputs_and_preview
 from app.utils import select_xml_file, select_csv_file
-from app.events import file_path_breakdown
+from app.events import file_path_breakdown, run_sink_configuration
+from app.resource import process_sink_folder_reference
+from app.pages import reports_page
 
 async def xml_file_selection():
     await select_xml_file()
-    ui.timer(interval=0.1, callback=data_table.refresh, once=True)
     await file_path_breakdown()
+    progress_dialog.open()
+    await run_sink_configuration()
+    progress_dialog.close()
+    ui.timer(interval=0.1, callback=data_table.refresh, once=True)
     ui.timer(interval=0.1, callback=label_inputs_and_preview.refresh, once=True)
+    ui.timer(interval=0.1, callback=process_sink_folder_reference.refresh, once=True)
 
 async def csv_file_selection():
     await select_csv_file()
-    ui.timer(interval=0.1, callback=data_table.refresh, once=True)
     await file_path_breakdown()
+    ui.timer(interval=0.1, callback=data_table.refresh, once=True)
     ui.timer(interval=0.1, callback=label_inputs_and_preview.refresh, once=True)
 
 def header_component():
@@ -33,6 +39,13 @@ def header_component():
                     ui.avatar(icon='file_open')
                     ui.label('CSV File').classes('my-auto ml-2')
 
-        with ui.button(icon='work_history').classes('ml-auto h-14'):
+        with ui.button(icon='work_history', on_click= reports_page).classes('ml-auto h-14'):
             ui.tooltip('View reports').classes('bg-green')
-            badge = ui.badge(text='0', color='red').props('floating')
+            ui.badge(text='0', color='red').props('floating')
+
+        # Display the progress dialog
+        global progress_dialog
+        with ui.dialog().props('persistent') as progress_dialog:
+            with ui.card().style('width: 200px; height: 200px; display: flex; align-items: center; justify-content: center;'):
+                ui.spinner(size='lg')
+                ui.label('Processing...').classes('mt-4')

@@ -1,1 +1,1 @@
-from .gui import main_page
+from .sink_config_reports import reports_page

@@ -15,7 +15,6 @@ server_to_drive_mapping = {
     "\\\\fs01\\library\\": "Z:\\"
 }
 
-
 def replace_server_string_with_drive(path):
     path_lower = path.lower()
     for server_string, drive in server_to_drive_mapping.items():
@@ -24,10 +23,8 @@ def replace_server_string_with_drive(path):
             return path.replace(server_string, drive)
     return path
 
-
 catalog = "CATALOG"
 chainAccounts = ["OG", "OBS", "LH", "CG", "BB", "RL", "Ruths Chris", "CH", "FPS"]
-
 
 def breakdown_path(path):
     if ':' in path:
@@ -115,12 +112,10 @@ def breakdown_path(path):
 
     return customer_location, location_folder, item_number
 
-
 def check_file_extension():
     file_path = app.storage.general.get('file_path', '')
     file_extension = os.path.splitext(file_path)[1]
     return file_extension, file_path
-
 
 async def file_path_breakdown():
     data = {}

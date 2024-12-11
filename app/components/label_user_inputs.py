@@ -1,40 +1,43 @@
-import cairo
-from io import BytesIO
+import os
 from nicegui import ui, app
 from app.data import save_data
-from nicegui.functions.refreshable import refreshable
 
-customer_location_input = None
-job_name_input = None
-item_number_input = None
-file_path_label = None
-
-tppn_milmat_label = None
-part_number_label = None
-x_of_y_label = None
-
-@refreshable
+@ui.refreshable
 def label_inputs_and_preview():
+
+    file_path = app.storage.general.get('file_path')
+    file_extension = os.path.splitext(file_path)[1]
+
+    if file_extension == '.xml':
+        xml_data = app.storage.general.get('xml_table', [{}])[0]
+        tppn_milmat_label = f"Part # {xml_data.get('tops_part_number', '')}"
+        part_number_label = xml_data.get('unique_code', 'Example Part Number')
+        x_of_y_label = xml_data.get('x_of_y', '1 of 1')
+    elif file_extension == '.csv':
+        csv_data = app.storage.general.get('csv_table', [{}])[0]
+        tppn_milmat_label = csv_data.get('Material', 'Material')
+        part_number_label = csv_data.get('File Name', 'Example Part Number')
+        x_of_y_label = csv_data.get('x_of_y', '1 of 1')
+
     with ui.splitter().classes('w-full') as splitter:
         with splitter.before:
             with ui.column().classes('w-full p-4'):
-                global customer_location_input, job_name_input, item_number_input, file_path_label
-                customer_location_input = ui.input(
+                ui.input(
                     label='Customer Location',
                     on_change=lambda e: (save_data('file_breakdown.customer_location', e.value))
                 ).bind_value(app.storage.general['file_breakdown'], 'customer_location').classes('w-full')
 
-                job_name_input = ui.input(
+                ui.input(
                     label='Job Name',
                     on_change=lambda e: (save_data('file_breakdown.job_name', e.value))
                 ).bind_value(app.storage.general['file_breakdown'], 'job_name').classes('w-full')
 
-                item_number_input = ui.input(
+                ui.input(
                     label='Item Number',
                     on_change=lambda e: (save_data('file_breakdown.item_name', e.value))
                 ).bind_value(app.storage.general['file_breakdown'], 'item_name').classes('w-full')
 
-                file_path_label = ui.label().bind_text(app.storage.general['file_breakdown'], target_name='file_path').classes('w-full mt-4')
+                ui.label().bind_text(app.storage.general['file_breakdown'], target_name='file_path').classes('w-full mt-4')
 
         with splitter.after:
             with ui.column().classes('w-full p-4').style('padding: 20px;'):
@@ -49,35 +52,7 @@ def label_inputs_and_preview():
                         ui.label().bind_text(app.storage.general['file_breakdown'], 'job_name').classes('pl-1 col-span-2').style('font-size: 12px;')
                         ui.label().bind_text(app.storage.general['file_breakdown'], 'item_name').classes('col-span-2 flex justify-center items-center').style(
                             'font-size: 14px;')
-                        # Example part number and other labels
-                        global tppn_milmat_label, part_number_label, x_of_y_label
-                        tppn_milmat_label = ui.label('Part # Example').classes('pl-2 col-span-1 text-white bg-black').style('font-size: 12px;')
-                        part_number_label = ui.label('Example Part Number').classes(
-                            'flex justify-center items-center col-span-3 row-span-2 text-white bg-black').style('font-size: 16px;')
-                        x_of_y_label = ui.label('1 of 1').classes('pl-4 col-span-1 bg-black text-white').style('font-size: 10px;')
-                        ui.label().bind_text(app.storage.general['file_breakdown'], 'file_path').classes('pl-1 col-span-full mx-auto flex-auto').style(
-                            'font-size: 10px')
-
-                def generate_svg() -> str:
-                    output = BytesIO()
-                    surface = cairo.SVGSurface(output, 288, 72)
-                    draw(surface)
-                    surface.finish()
-                    return output.getvalue().decode('utf-8')
-
-                def draw(surface: cairo.Surface) -> None:
-                    context = cairo.Context(surface)
-                    context.select_font_face('Arial', cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_NORMAL)
-                    context.set_font_size(20)
-                    context.move_to(10, 10)
-                    context.show_text(customer_location_input.value)
-                    context.move_to(10, 20)
-                    context.show_text(job_name_input.value)
-                    context.move_to(10, 30)
-                    context.show_text(item_number_input.value)
-
-                # New label preview using SVG
-                with ui.column():
-                    ui.label('SVG LABEL PREVIEW').classes('font-bold')
-                    svg_preview = ui.html().classes('border-2 border-gray-500').style('width: 4in; height: 1in;')
-                    svg_preview.content = generate_svg()
+                        ui.label(tppn_milmat_label).classes('pl-2 col-span-1 text-white bg-black').style('font-size: 12px;')
+                        ui.label(part_number_label).classes('flex justify-center items-center col-span-3 row-span-2 text-white bg-black').style('font-size: 16px;')
+                        ui.label(x_of_y_label).classes('pl-4 col-span-1 bg-black text-white').style('font-size: 10px;')
+                        ui.label().bind_text(app.storage.general['file_breakdown'], 'file_path').classes('pl-1 col-span-full mx-auto flex-auto').style( 'font-size: 10px')

@@ -5,7 +5,6 @@ import cairo
 
 from nicegui import ui
 
-
 def generate_svg() -> str:
     output = BytesIO()
     surface = cairo.SVGSurface(output, 300, 200)
@@ -21,7 +20,6 @@ def generate_pdf() -> bytes:
     surface.finish()
     return output.getvalue()
 
-
 def draw(surface: cairo.Surface) -> None:
     context = cairo.Context(surface)
     context.select_font_face('Arial', cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_NORMAL)
@@ -31,10 +29,8 @@ def draw(surface: cairo.Surface) -> None:
     context.move_to(10, 80)
     context.show_text(email.value)
 
-
 def update() -> None:
     preview.content = generate_svg()
-
 
 with ui.row():
     with ui.column():

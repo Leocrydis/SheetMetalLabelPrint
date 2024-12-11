@@ -16,7 +16,7 @@ async def select_xml_file():
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             xml_content = file.read()
-        ui.notify(f'XML File Loaded: {file_path}', position='center', type='positive')
+        #ui.notify(f'XML File Loaded: {file_path}', position='center', type='positive')
 
         app.storage.general.indent = True  # Enable JSON indentation for the storage
         app.storage.general['file_path'] = file_path  # Store the sorted data into app storage
@@ -41,7 +41,7 @@ async def select_csv_file():
     try:
         with open(file_path, 'r', encoding='utf-8-sig') as file:
             csv_content = file.read()
-        ui.notify(f'CSV File Loaded: {file_path}', position='center', type='positive')
+        #ui.notify(f'CSV File Loaded: {file_path}', position='center', type='positive')
 
         app.storage.general.indent = True  # Enable JSON indentation for the storage
         app.storage.general['file_path'] = file_path  # Store the sorted data into app storage

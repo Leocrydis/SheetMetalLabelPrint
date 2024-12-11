@@ -1,4 +1,3 @@
-import os
 import json
 from nicegui import app
 
@@ -11,6 +10,3 @@ def save_data(key, data):
     # Optionally, save the updated data back to the JSON file
     with open('.nicegui/storage-general.json', 'w') as file:
         json.dump(app.storage.general, file, indent=4)
-
-def load_data(key):
-    return app.storage.general.get(key)
