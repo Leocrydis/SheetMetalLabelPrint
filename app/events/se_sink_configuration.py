@@ -1,7 +1,7 @@
 import asyncio
 import os.path
 import subprocess
-from nicegui import app, ui
+from nicegui import app
 
 async def run_sink_configuration():
     file_path = app.storage.general.get('file_path', '')

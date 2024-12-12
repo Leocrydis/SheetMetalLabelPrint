@@ -3,33 +3,51 @@ import os
 from io import BytesIO
 from nicegui import app, ui
 
-# Retrieve necessary data from storage
-xml_table = app.storage.general.get('xml_table', [])
-matched_sinks = app.storage.general.get('matched_sinks', [])
-file_path = app.storage.general.get('file_path')
 
-OUTPUT_DIR = os.path.dirname(__file__)
+# Retrieve necessary data from storage
+def get_xml_table():
+    return app.storage.general.get('xml_table', [])
+
+
+def get_matched_sinks():
+    return app.storage.general.get('matched_sinks', [])
+
+
+def get_file_path():
+    return app.storage.general.get('file_path')
+
+
+OUTPUT_DIR = r"M:\0-BOOST NC\SINK REPORTS"
 
 
 def reports_page():
     """
     Generates and displays the reports page inside a dialog.
     """
+
+    # Reactively bind the SVG content to the storage data
+    def update_report_preview():
+        report_preview.content = generate_svg()
+
     # Dialog for viewing the report
     with ui.dialog() as report_dialog:
         with ui.card().classes('p-4').style('width: 650px; max-width: 90%;'):
             # Display the SVG preview inside a bordered HTML container
             report_preview = ui.html().classes('border-2 border-gray-500 rounded-md mb-2').style('width: 612px; height: 792px;')
-            report_preview.content = generate_svg()
+            update_report_preview()  # Initial load
 
-            # Print Button
-            ui.button('Export Report', on_click=lambda: generate_pdf()).classes('mt-2')
+            # Reactively update SVG preview if storage changes
+            ui.timer(1.0, update_report_preview)  # Poll for updates every second
 
-    return report_dialog
+    report_dialog.open()
 
 
 # Function to draw the content of the report
 def draw(surface):
+    xml_table = get_xml_table()
+    matched_sinks = get_matched_sinks()
+    file_path = get_file_path()
+
     context = cairo.Context(surface)
 
     # Define layout sizes
@@ -63,7 +81,11 @@ def draw(surface):
     context.set_font_size(12)
     y_offset = 120
     row_height = 20
-    for row in xml_table:
+
+    # Filter rows to include only those with a defined `sink_combined_configuration`
+    filtered_xml_table = [row for row in xml_table if row.get("sink_combined_configuration")]
+
+    for row in filtered_xml_table:
         # Get data for each row
         part_number = row.get("part_number", "N/A")
         sink_config = row.get("sink_combined_configuration", "N/A")
