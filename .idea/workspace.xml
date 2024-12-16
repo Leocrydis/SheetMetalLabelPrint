@@ -5,503 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="817235fd-03bf-4149-bdde-627ea7d315a7" name="Changes" comment="feature fix for viewing report and the badge associated with it. no dynamically updates the report for evey xml and the ablity to look at pdfs tho that is currentyl not workign the file is there. also add poppler will ignore this on commit but need to some how auto distribute for user and load the envirment variable">
-      <change afterPath="$PROJECT_DIR$/app/data/miner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/examples/pdf_viewer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/examples/pdf_viewer/miner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/examples/pdf_viewer/pdf_viewer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/examples/test/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pages/archive/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pages/archive/sink_reports_current.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pages/archive/sink_reports_original.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pages/pdf_preview.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/Lerc.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/cairo.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/charset.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/deflate.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/expat.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/fontconfig-1.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/freetype.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/iconv.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/jpeg8.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/lcms2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/libcrypto-3-x64.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/libcurl.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/libexpat.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/liblzma.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/libpng16.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/libssh2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/libtiff.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/libzstd.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/openjp2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/pdfattach.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/pdfdetach.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/pdffonts.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/pdfimages.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/pdfinfo.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/pdfseparate.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/pdftocairo.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/pdftohtml.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/pdftoppm.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/pdftops.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/pdftotext.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/pdfunite.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/pixman-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/poppler-cpp.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/poppler-glib.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/poppler.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/tiff.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/zlib.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/zstd.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/bin/zstd.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Annot.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/AnnotStampImageHelper.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Array.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/BBoxOutputDev.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/CMap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/CachedFile.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/CairoFontEngine.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/CairoOutputDev.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/CairoRescaleBox.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Catalog.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/CertificateInfo.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/CharCodeToUnicode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/CharTypes.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/CurlCachedFile.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/CurlPDFDocBuilder.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/DateInfo.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Decrypt.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Dict.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Error.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/ErrorCodes.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/FDPDFDocBuilder.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/FILECacheLoader.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/FileSpec.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/FontEncodingTables.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/FontInfo.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Form.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Function.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Gfx.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/GfxFont.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/GfxState.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/GfxState_helpers.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/GlobalParams.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/HashAlgorithm.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Hints.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/JArithmeticDecoder.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/JBIG2Stream.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/JPEG2000Stream.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/JSInfo.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Lexer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Linearization.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Link.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/LocalPDFDocBuilder.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/MarkedContentOutputDev.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Movie.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/NameToCharCode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/NameToUnicodeTable.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Object.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/OptionalContent.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Outline.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/OutputDev.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/PDFDoc.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/PDFDocBuilder.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/PDFDocEncoding.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/PDFDocFactory.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/PSOutputDev.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/PSTokenizer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Page.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/PageTransition.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Parser.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/PopplerCache.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/PreScanOutputDev.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/ProfileData.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Rendition.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/SecurityHandler.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/SignatureInfo.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Sound.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/SplashOutputDev.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Stream-CCITT.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/Stream.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/StructElement.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/StructTreeRoot.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/TextOutputDev.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/UTF.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/UnicodeCClassTables.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/UnicodeCompTables.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/UnicodeDecompTables.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/UnicodeMap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/UnicodeMapFuncs.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/UnicodeMapTables.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/UnicodeTypeTable.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/ViewerPreferences.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/XRef.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/cpp/poppler-destination.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/cpp/poppler-document.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/cpp/poppler-embedded-file.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/cpp/poppler-font-private.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/cpp/poppler-font.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/cpp/poppler-global.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/cpp/poppler-image.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/cpp/poppler-page-renderer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/cpp/poppler-page-transition.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/cpp/poppler-page.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/cpp/poppler-rectangle.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/cpp/poppler-toc.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/cpp/poppler-version.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/cpp/poppler_cpp_export.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/fofi/FoFiBase.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/fofi/FoFiEncodings.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/fofi/FoFiIdentifier.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/fofi/FoFiTrueType.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/fofi/FoFiType1.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/fofi/FoFiType1C.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/glib/poppler-action.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/glib/poppler-annot.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/glib/poppler-attachment.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/glib/poppler-date.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/glib/poppler-document.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/glib/poppler-enums.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/glib/poppler-features.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/glib/poppler-form-field.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/glib/poppler-layer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/glib/poppler-macros.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/glib/poppler-media.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/glib/poppler-movie.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/glib/poppler-page.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/glib/poppler-structure-element.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/glib/poppler.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/goo/GooCheckedOps.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/goo/GooLikely.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/goo/GooString.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/goo/GooTimer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/goo/ImgWriter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/goo/JpegWriter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/goo/PNGWriter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/goo/TiffWriter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/goo/gdir.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/goo/gfile.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/goo/gmem.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/goo/grandom.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/goo/gstrtod.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/poppler-config.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/poppler_private_export.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/Splash.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashBitmap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashClip.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashErrorCodes.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashFTFont.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashFTFontEngine.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashFTFontFile.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashFont.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashFontEngine.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashFontFile.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashFontFileID.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashGlyphBitmap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashMath.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashPath.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashPattern.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashScreen.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashState.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashTypes.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashXPath.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/include/poppler/splash/SplashXPathScanner.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/lib/pkgconfig/poppler-cpp.pc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/lib/pkgconfig/poppler-glib.pc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/lib/pkgconfig/poppler.pc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/lib/poppler-cpp.lib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/lib/poppler-glib.lib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/lib/poppler.lib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/share/man/man1/pdfattach.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/share/man/man1/pdfdetach.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/share/man/man1/pdffonts.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/share/man/man1/pdfimages.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/share/man/man1/pdfinfo.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/share/man/man1/pdfseparate.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/share/man/man1/pdftocairo.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/share/man/man1/pdftohtml.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/share/man/man1/pdftoppm.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/share/man/man1/pdftops.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/share/man/man1/pdftotext.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/Library/share/man/man1/pdfunite.1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/COPYING" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/COPYING.adobe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/COPYING.gpl2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-B5pc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-ETen-B5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-H-CID" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-H-Host" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-H-Mac" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/Adobe-CNS1-UCS2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/B5-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/B5-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/B5pc-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/B5pc-UCS2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/B5pc-UCS2C" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/B5pc-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/CNS-EUC-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/CNS-EUC-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/CNS1-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/CNS1-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/CNS2-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/CNS2-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/ETHK-B5-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/ETHK-B5-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/ETen-B5-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/ETen-B5-UCS2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/ETen-B5-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/ETenms-B5-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/ETenms-B5-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/HKdla-B5-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/HKdla-B5-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/HKdlb-B5-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/HKdlb-B5-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/HKgccs-B5-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/HKgccs-B5-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/HKm314-B5-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/HKm314-B5-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/HKm471-B5-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/HKm471-B5-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/HKscs-B5-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/HKscs-B5-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/UCS2-B5pc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/UCS2-ETen-B5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/UniCNS-UCS2-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/UniCNS-UCS2-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/UniCNS-UTF16-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/UniCNS-UTF16-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/UniCNS-UTF32-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/UniCNS-UTF32-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/UniCNS-UTF8-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-CNS1/UniCNS-UTF8-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/Adobe-GB1-0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/Adobe-GB1-1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/Adobe-GB1-2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/Adobe-GB1-3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/Adobe-GB1-4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/Adobe-GB1-5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/Adobe-GB1-GBK-EUC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/Adobe-GB1-GBpc-EUC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/Adobe-GB1-H-CID" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/Adobe-GB1-H-Host" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/Adobe-GB1-H-Mac" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/Adobe-GB1-UCS2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GB-EUC-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GB-EUC-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GB-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GB-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBK-EUC-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBK-EUC-UCS2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBK-EUC-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBK2K-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBK2K-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBKp-EUC-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBKp-EUC-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBT-EUC-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBT-EUC-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBT-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBT-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBTpc-EUC-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBTpc-EUC-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBpc-EUC-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBpc-EUC-UCS2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBpc-EUC-UCS2C" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/GBpc-EUC-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/UCS2-GBK-EUC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/UCS2-GBpc-EUC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/UniGB-UCS2-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/UniGB-UCS2-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/UniGB-UTF16-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/UniGB-UTF16-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/UniGB-UTF32-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/UniGB-UTF32-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/UniGB-UTF8-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-GB1/UniGB-UTF8-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/78-EUC-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/78-EUC-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/78-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/78-RKSJ-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/78-RKSJ-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/78-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/78ms-RKSJ-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/78ms-RKSJ-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/83pv-RKSJ-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/90ms-RKSJ-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/90ms-RKSJ-UCS2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/90ms-RKSJ-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/90msp-RKSJ-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/90msp-RKSJ-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/90pv-RKSJ-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/90pv-RKSJ-UCS2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/90pv-RKSJ-UCS2C" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/90pv-RKSJ-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Add-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Add-RKSJ-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Add-RKSJ-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Add-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-90ms-RKSJ" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-90pv-RKSJ" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-H-CID" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-H-Host" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-H-Mac" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-PS-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-PS-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Adobe-Japan1-UCS2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/EUC-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/EUC-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Ext-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Ext-RKSJ-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Ext-RKSJ-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Ext-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Hankaku" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Hiragana" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Hojo-EUC-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Hojo-EUC-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Hojo-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Hojo-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Katakana" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/NWP-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/NWP-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/RKSJ-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/RKSJ-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/Roman" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UCS2-90ms-RKSJ" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UCS2-90pv-RKSJ" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniHojo-UCS2-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniHojo-UCS2-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniHojo-UTF16-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniHojo-UTF16-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniHojo-UTF32-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniHojo-UTF32-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniHojo-UTF8-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniHojo-UTF8-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS-UCS2-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS-UCS2-HW-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS-UCS2-HW-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS-UCS2-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS-UTF16-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS-UTF16-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS-UTF32-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS-UTF32-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS-UTF8-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS-UTF8-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS2004-UTF16-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS2004-UTF16-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS2004-UTF32-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS2004-UTF32-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS2004-UTF8-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJIS2004-UTF8-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJISPro-UCS2-HW-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJISPro-UCS2-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJISPro-UTF8-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJISX0213-UTF32-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJISX0213-UTF32-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJISX02132004-UTF32-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/UniJISX02132004-UTF32-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan1/WP-Symbol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Japan2/Adobe-Japan2-0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-KR/Adobe-KR-0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-KR/Adobe-KR-1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-KR/Adobe-KR-2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-KR/Adobe-KR-3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-KR/Adobe-KR-4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-KR/Adobe-KR-5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-KR/Adobe-KR-6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-KR/Adobe-KR-7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-KR/Adobe-KR-8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-KR/Adobe-KR-9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-KR/Adobe-KR-UCS2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-KR/UniAKR-UTF16-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-KR/UniAKR-UTF32-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-KR/UniAKR-UTF8-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/Adobe-Korea1-0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/Adobe-Korea1-1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/Adobe-Korea1-2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/Adobe-Korea1-H-CID" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/Adobe-Korea1-H-Host" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/Adobe-Korea1-H-Mac" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/Adobe-Korea1-KSCms-UHC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/Adobe-Korea1-KSCpc-EUC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/Adobe-Korea1-UCS2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/KSC-EUC-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/KSC-EUC-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/KSC-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/KSC-Johab-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/KSC-Johab-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/KSC-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/KSCms-UHC-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/KSCms-UHC-HW-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/KSCms-UHC-HW-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/KSCms-UHC-UCS2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/KSCms-UHC-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/KSCpc-EUC-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/KSCpc-EUC-UCS2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/KSCpc-EUC-UCS2C" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/KSCpc-EUC-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/UCS2-KSCms-UHC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/UCS2-KSCpc-EUC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/UniKS-UCS2-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/UniKS-UCS2-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/UniKS-UTF16-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/UniKS-UTF16-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/UniKS-UTF32-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/UniKS-UTF32-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/UniKS-UTF8-H" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cMap/Adobe-Korea1/UniKS-UTF8-V" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cidToUnicode/Adobe-CNS1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cidToUnicode/Adobe-GB1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cidToUnicode/Adobe-Japan1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/cidToUnicode/Adobe-Korea1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/nameToUnicode/Bulgarian" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/nameToUnicode/Greek" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/nameToUnicode/Thai" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/poppler-data.pc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/poppler-data.pc.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/Big5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/Big5ascii" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/EUC-CN" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/EUC-JP" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/GBK" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/ISO-2022-CN" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/ISO-2022-JP" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/ISO-2022-KR" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/ISO-8859-6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/ISO-8859-7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/ISO-8859-8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/ISO-8859-9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/KOI8-R" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/Latin2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/Shift-JIS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/TIS-620" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/third_party/poppler/share/poppler/unicodeMap/Windows-1255" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Label Print.spec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/label_print.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/qr_label_create.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/ss_label_create.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/label.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/sad_face.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/splash.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/header.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/header.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/label_user_inputs.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/label_user_inputs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/table.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/table.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/events/se_sink_configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/events/se_sink_configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/sink_config_reports.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/sink_config_reports.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resource/sink_program_reference.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/resource/sink_program_reference.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/app_storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/app_storage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/test/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/test/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/pdf_preview.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/pdf_preview.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resource/label_create.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/twob_label_create.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resource/label_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/resource/archive/label_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/startup.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/startup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -538,7 +62,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/PycharmProjects/LabelPrint/third_party/poppler&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;power.mode.ii&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -547,10 +71,11 @@
       <recent name="D:\PycharmProjects\LabelPrint\app\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\PycharmProjects\LabelPrint\app\pages\archive" />
-      <recent name="D:\PycharmProjects\LabelPrint\app\examples\pdf_viewer" />
-      <recent name="D:\PycharmProjects\LabelPrint\app\resource" />
-      <recent name="D:\PycharmProjects\LabelPrint\app\events" />
+      <recent name="D:\PycharmProjects\LabelPrint\app\resource\archive" />
+      <recent name="D:\PycharmProjects\LabelPrint\app\utils" />
+      <recent name="D:\PycharmProjects\LabelPrint" />
+      <recent name="D:\PycharmProjects\LabelPrint\content" />
+      <recent name="D:\PycharmProjects\LabelPrint\icon" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -585,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733934785874</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feature fix for viewing report and the badge associated with it. no dynamically updates the report for evey xml and the ablity to look at pdfs tho that is currentyl not workign the file is there. also add poppler will ignore this on commit but need to some how auto distribute for user and load the envirment variable">
+      <option name="closed" value="true" />
+      <created>1734028798527</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734028798527</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -614,6 +147,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reinit project to new drive" />
     <MESSAGE value="added feature, view reports for sink configuration related to .lst files in the forming only folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="added feature, view reports for sink configuration related to .lst files in the forming only folder" />
+    <MESSAGE value="feature fix for viewing report and the badge associated with it. no dynamically updates the report for evey xml and the ablity to look at pdfs tho that is currentyl not workign the file is there. also add poppler will ignore this on commit but need to some how auto distribute for user and load the envirment variable" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature fix for viewing report and the badge associated with it. no dynamically updates the report for evey xml and the ablity to look at pdfs tho that is currentyl not workign the file is there. also add poppler will ignore this on commit but need to some how auto distribute for user and load the envirment variable" />
   </component>
 </project>

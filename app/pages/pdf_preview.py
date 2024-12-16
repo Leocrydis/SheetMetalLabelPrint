@@ -75,4 +75,4 @@ async def pdf_previewer():
             # Close button to exit and clean up temporary files
             ui.button("Close", on_click=lambda: [pdf_dialog.close(), cleanup_temp_images(TEMP_IMAGE_DIR)]).classes("mt-4")
 
-    return pdf_dialog
+    pdf_dialog.open()

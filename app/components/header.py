@@ -13,15 +13,15 @@ async def xml_file_selection():
     await run_sink_configuration()
     progress_dialog.close()
     data_table.refresh()
-    ui.timer(interval=0.1, callback=label_inputs_and_preview.refresh, once=True)
-    ui.timer(interval=0.1, callback=process_sink_folder_reference.refresh, once=True)
-    ui.timer(interval=0.1, callback=header_component.refresh, once=True)
+    label_inputs_and_preview.refresh()
+    process_sink_folder_reference.refresh()
+    header_component.refresh()
 
 async def csv_file_selection():
     await select_csv_file()
     await file_path_breakdown()
-    ui.timer(interval=0.1, callback=data_table.refresh, once=True)
-    ui.timer(interval=0.1, callback=label_inputs_and_preview.refresh, once=True)
+    data_table.refresh()
+    label_inputs_and_preview.refresh()
 
 @ui.refreshable
 def header_component():
@@ -29,7 +29,7 @@ def header_component():
         with ui.button(icon='menu').classes('h-14'):
             ui.tooltip('Menu').classes('bg-green')
             with ui.menu() as menu:
-                ui.menu_item('View PDF', on_click= pdf_previewer).props('icon=page_view')
+                ui.menu_item('View PDF', on_click= lambda: pdf_previewer()).props('icon=page_view')
                 ui.menu_item('Settings').props('icon=folder_open')
                 ui.menu_item('Close', menu.close())
 
