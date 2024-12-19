@@ -113,7 +113,7 @@ def create_label(data, data_type, total_labels):
     folder_path = "Z:\\PUNCH\\SINKS\\Form Only"  # Hardcoded folder path
     qr_data = 'file:///' + folder_path.replace('\\', '/').replace(' ', '%20')  # Replace backslashes with forward slashes and encode spaces
     l.origin(76.2 + 2, 2)  # Adjust the position for QR code
-    l.barcode('Q', qr_data, magnification=4)  # Adjust magnification as needed
+    l.barcode('Q', qr_data, magnification=5)  # Adjust magnification as needed
     l.endorigin()
 
     zpl_command = l.dumpZPL()

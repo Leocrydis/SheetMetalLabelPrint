@@ -18,7 +18,7 @@ async def data_table():
         ui.button('Print Selected', on_click=on_print_selected).classes('bg-green-500 text-white rounded')
         ui.switch('Repeat Print', value=True, on_change=lambda e: (globals().update(sheet_repeat_print=e.value), ui.notify(str(e.value))))
 
-        ui.switch(text='Hide Sink Config Column', value=True).classes('ml-auto pr-2')
+        ui.button('Laser Sticker', on_click=print_lst_label).classes('ml-auto pr-2')
 
     # Define the columns for the grid
     xml_columns = [
@@ -40,7 +40,7 @@ async def data_table():
     ]
 
     # Create the grid outside the function
-    global ag_grid  # Declare ag_grid as global to ensure it's accessible in other functions
+    global ag_grid  # Declare ag_grid as global to ensure it is accessible in other functions
     ag_grid = ui.aggrid(
         options={
             'columnDefs': [],
@@ -82,11 +82,11 @@ async def on_print_all():
     data_type = 'xml' if file_extension == '.xml' else 'csv'
     total_labels = len(table_data)
 
-    # Check if the .lst file exists once and add its command if it does
-    if check_lst_file_exists():
+    # Check for the .lst file only if the file extension is .xml
+    if file_extension == '.xml' and check_lst_file_exists():
         lst_zpl_command = create_lst_label()
         zpl_commands.append(lst_zpl_command)
-    else:
+    elif file_extension == '.xml':
         ui.notify('No .lst file exists', position='center', type='warning')
 
     if file_extension == '.xml' and sheet_repeat_print:
@@ -104,12 +104,12 @@ async def on_print_all():
             single_run_commands = []
             for data in labels:
                 # Determine the label type and create the label accordingly
-                label_type = get_printer(data['sheet'])
+                label_type = get_printer(data.get('sheet', '2B'))  # Handle missing 'sheet'
                 if 'sink_combined_configuration' in data and data['sink_combined_configuration']:
                     zpl_command = create_qr_label(data, data_type, total_labels)
                 elif label_type == "SS":
                     zpl_command = create_ss_label(data, data_type, total_labels)
-                else:
+                else:  # Default to 2B
                     zpl_command = create_twob_label(data, data_type)
                 single_run_commands.append(zpl_command)
 
@@ -120,12 +120,12 @@ async def on_print_all():
     else:
         for data in table_data:
             # Determine the label type and create the label accordingly
-            label_type = get_printer(data['sheet'])
+            label_type = get_printer(data.get('sheet', '2B'))  # Handle missing 'sheet'
             if 'sink_combined_configuration' in data and data['sink_combined_configuration']:
                 zpl_command = create_qr_label(data, data_type, total_labels)
             elif label_type == "SS":
                 zpl_command = create_ss_label(data, data_type, total_labels)
-            else:
+            else:  # Default to 2B
                 zpl_command = create_twob_label(data, data_type)
             zpl_commands.append(zpl_command)
 
@@ -135,11 +135,12 @@ async def on_print_all():
     # Determine the label type based on the sheet value
     if table_data:
         if file_extension == '.xml':
-            label_type = get_printer(table_data[0]['sheet'])
+            label_type = get_printer(table_data[0].get('sheet', '2B'))  # Handle missing 'sheet'
         else:
-            label_type = "2B" # Always print CSV data to the 2B printer
+            label_type = "2B"  # Always print CSV data to the 2B printer
         # Print all labels in one go
         print_label(all_zpl_commands, label_type)
+
 
 async def on_print_selected():
     file_extension = check_file_extension()
@@ -149,10 +150,11 @@ async def on_print_selected():
     data_type = 'xml' if file_extension == '.xml' else 'csv'
     total_labels = len(selected_rows)
 
-    # Check if the .lst file exists once and add its command if it does
-    if check_lst_file_exists():
-        pass
-    else:
+    # Check for the .lst file only if the file extension is .xml
+    if file_extension == '.xml' and check_lst_file_exists():
+        lst_zpl_command = create_lst_label()  # This is skipped if .csv
+        zpl_commands.append(lst_zpl_command)
+    elif file_extension == '.xml':
         ui.notify('No .lst file exists', position='center', type='warning')
 
     if file_extension == '.xml' and sheet_repeat_print:
@@ -170,12 +172,12 @@ async def on_print_selected():
             single_run_commands = []
             for data in labels:
                 # Determine the label type and create the label accordingly
-                label_type = get_printer(data['sheet'])
+                label_type = get_printer(data.get('sheet', '2B'))  # Use default '2B' for missing 'sheet'
                 if 'sink_combined_configuration' in data and data['sink_combined_configuration']:
                     zpl_command = create_qr_label(data, data_type, total_labels)
                 elif label_type == "SS":
                     zpl_command = create_ss_label(data, data_type, total_labels)
-                else:
+                else:  # Default to 2B
                     zpl_command = create_twob_label(data, data_type)
                 single_run_commands.append(zpl_command)
 
@@ -186,12 +188,12 @@ async def on_print_selected():
     else:
         for data in selected_rows:
             # Determine the label type and create the label accordingly
-            label_type = get_printer(data['sheet'])
+            label_type = get_printer(data.get('sheet', '2B'))  # Use default '2B' for missing 'sheet'
             if 'sink_combined_configuration' in data and data['sink_combined_configuration']:
                 zpl_command = create_qr_label(data, data_type, total_labels)
             elif label_type == "SS":
                 zpl_command = create_ss_label(data, data_type, total_labels)
-            else:
+            else:  # Default to 2B
                 zpl_command = create_twob_label(data, data_type)
             zpl_commands.append(zpl_command)
 
@@ -203,11 +205,12 @@ async def on_print_selected():
     # Determine the label type based on the sheet value
     if selected_rows:
         if file_extension == '.xml':
-            label_type = get_printer(selected_rows[0]['sheet'])
+            label_type = get_printer(selected_rows[0].get('sheet', '2B'))  # Handle missing 'sheet'
         else:
             label_type = "2B"  # Always print CSV data to the 2B printer
         # Print all selected labels in one go
         print_label(all_zpl_commands, label_type)
+
 
 async def print_lst_label():
     lst_zpl_command = create_lst_label()

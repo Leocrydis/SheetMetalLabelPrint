@@ -119,46 +119,49 @@ def check_file_extension():
 
 async def file_path_breakdown():
     data = {}
-    file_extension, file_path = check_file_extension()
 
-    # Handle specific path and alternative DXF file selection
-    if "M:\\0-BOOST NC\\PR\\PINK-RUSH" in file_path:
+    # Get the original file path and its extension
+    file_extension, original_file_path = check_file_extension()
+
+    # Initialize the file path to the original .xml/.csv/.dxf file path
+    file_path = original_file_path
+
+    # If in the specific `M:\\0-BOOST NC\\PR\\PINK-RUSH` directory and it's an .xml file, allow a .dxf selection
+    if "M:\\0-BOOST NC\\PR\\PINK-RUSH" in file_path and file_extension == '.xml':
         dxf_file_path = await select_dxf_file()
         if dxf_file_path:
-            # Use dxf_file_path for breakdown if condition is met
-            file_path = dxf_file_path
+            # Replace server path for the selected .dxf file
+            dxf_file_path = replace_server_string_with_drive(dxf_file_path)
+
+            # Use the breakdown of the selected DXF file but retain the original .xml file path
+            dxf_customer_location, dxf_job_name, dxf_item_name = breakdown_path(dxf_file_path)
+
+            # Populate the shared fields based on the DXF breakdown
+            data.update({
+                "file_path": original_file_path,  # Keep the original .xml path
+                "customer_location": dxf_customer_location,
+                "job_name": dxf_job_name,
+                "item_name": dxf_item_name
+            })
         else:
+            # Notify user if no DXF file was selected
             ui.notify('DXF file selection cancelled', position='center', type='negative')
             return
+    else:
+        # For other cases, replace server path for the original file
+        file_path = replace_server_string_with_drive(file_path)
 
-    # Replace the server part of the path with the drive letter
-    file_path = replace_server_string_with_drive(file_path)
+        # Populate shared fields for XML, CSV, or DXF file directly
+        if file_extension in ['.xml', '.csv', '.dxf']:
+            customer_location, job_name, item_name = breakdown_path(file_path)
+            data.update({
+                "file_path": file_path,
+                "customer_location": customer_location,
+                "job_name": job_name,
+                "item_name": item_name
+            })
 
-    if file_extension == '.xml':
-        xml_customer_location, xml_job_name, xml_item_name = breakdown_path(file_path)
-        data.update({
-            "file_path": file_path,
-            "customer_location": xml_customer_location,
-            "job_name": xml_job_name,
-            "item_name": xml_item_name
-        })
-
-    elif file_extension == '.csv':
-        csv_customer_location, csv_job_name, csv_item_name = breakdown_path(file_path)
-        data.update({
-            "file_path": file_path,
-            "customer_location": csv_customer_location,
-            "job_name": csv_job_name,
-            "item_name": csv_item_name
-        })
-
-    elif file_extension == '.dxf':
-        dxf_customer_location, dxf_job_name, dxf_item_number = breakdown_path(file_path)
-        data.update({
-            "file_path": file_path,
-            "customer_location": dxf_customer_location,
-            "job_name": dxf_job_name,
-            "item_name": dxf_item_number
-        })
-
+    # Update app storage with the final breakdown data
     app.storage.general['file_breakdown'] = data
+
+

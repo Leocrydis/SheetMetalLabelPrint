@@ -25,7 +25,7 @@ async def select_pdf_file():
     return pdf_path
 
 
-def convert_pdf_to_images(pdf_path: str, output_dir: str) -> list[str]:
+async def convert_pdf_to_images(pdf_path: str, output_dir: str) -> list[str]:
     """
     Converts the PDF at the given path to images, saving them to the output directory.
     Returns the list of image file paths.
@@ -56,23 +56,27 @@ def cleanup_temp_images(output_dir: str):
 async def pdf_previewer():
     """
     Prompts the user to select a PDF, converts it into images, and displays them in a dialog.
+    Cleans up temporary image files both before and during the operation.
     """
-    # Step 1: Prompt the user to select a PDF file
+    cleanup_temp_images(TEMP_IMAGE_DIR)
+
     pdf_path = await select_pdf_file()
 
     if not pdf_path:
-        return  # No file was selected
+        return
 
-    # Step 2: Convert PDF to images
-    image_paths = convert_pdf_to_images(pdf_path, TEMP_IMAGE_DIR)
+    #Convert PDF to images
+    image_paths = await convert_pdf_to_images(pdf_path, TEMP_IMAGE_DIR)
 
-    # Step 3: Create and display the dialog with images
-    with ui.dialog() as pdf_dialog:
-        with ui.card().style("width: 700px; height: 600px; overflow-y: auto;").classes("p-4"):
-            # Display each page of the PDF as an image
-            for image_path in image_paths:
-                ui.image(image_path).style("max-width: 100%; height: auto; margin-bottom: 10px;")
-            # Close button to exit and clean up temporary files
-            ui.button("Close", on_click=lambda: [pdf_dialog.close(), cleanup_temp_images(TEMP_IMAGE_DIR)]).classes("mt-4")
+    with ui.context.client.content:
+        with ui.dialog().props('persistent') as pdf_dialog:
+            with ui.card().classes('p-4').style('width: 650px; max-width: 90%;'):
+                #Display each page of the PDF as an image
+                for image_path in image_paths:
+                    ui.image(image_path).style("max-width: 100%; height: auto; margin-bottom: 10px;")
+                ui.button(
+                    "Close",
+                    on_click=lambda: [pdf_dialog.close(), cleanup_temp_images(TEMP_IMAGE_DIR)]
+                ).classes("mt-4")
 
     pdf_dialog.open()

@@ -1,9 +1,9 @@
 import socket
 
 def print_label(zpl_command, label_type):
-    printer_ip = "192.168.1.202"  # Default IP for SS
+    printer_ip = '192.168.1.184'  # Default IP for SS
     if label_type == "2B" or label_type == "CSV" or label_type == "GL":
-        printer_ip = "192.168.1.238"
+        printer_ip = '192.168.1.238'
     printer_port = 9100
 
     try:

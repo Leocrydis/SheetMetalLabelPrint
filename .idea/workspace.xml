@@ -4,28 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="817235fd-03bf-4149-bdde-627ea7d315a7" name="Changes" comment="feature fix for viewing report and the badge associated with it. no dynamically updates the report for evey xml and the ablity to look at pdfs tho that is currentyl not workign the file is there. also add poppler will ignore this on commit but need to some how auto distribute for user and load the envirment variable">
-      <change afterPath="$PROJECT_DIR$/Label Print.spec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/label_print.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/qr_label_create.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/ss_label_create.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/label.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/sad_face.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/splash.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="817235fd-03bf-4149-bdde-627ea7d315a7" name="Changes" comment="Added the ability to print lables and qr codes for the sink configurations, they do not work and are only referencing a fix folder. &#10;&#10;Need to fix pdf viewer &#10;Need to fix distribution on exe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/header.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/header.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/label_user_inputs.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/label_user_inputs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/table.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/table.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/app_storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/app_storage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/examples/test/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/examples/test/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/events/location_breakdown.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/events/location_breakdown.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/authentication/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/authentication/conftest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/authentication/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/authentication/test_authentication.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/generate_pdf/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/generate_pdf/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/generate_pdf/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/menu_and_tabs/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/modularization/api_router_example.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/modularization/class_example.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/modularization/function_example.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/modularization/home_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/modularization/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/modularization/menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/modularization/message.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/modularization/theme.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/pdf_viewer/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/pdf_viewer/miner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/pdf_viewer/pdf_viewer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/script_executor/hello.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/script_executor/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/script_executor/slow.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/table_and_slots/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/test/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/trello_cards/draganddrop.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/examples/trello_cards/main.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pages/pdf_preview.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/pdf_preview.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resource/label_create.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/twob_label_create.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resource/label_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/resource/archive/label_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/startup.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/startup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/sink_config_reports.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/sink_config_reports.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/label_print.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/label_print.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/qr_label_create.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/qr_label_create.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,18 +65,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.label_test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pdf_viewer.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/PycharmProjects/LabelPrint/third_party/poppler&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;power.mode.ii&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.label_test.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.pdf_viewer.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/PycharmProjects/LabelPrint/third_party/poppler",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PycharmProjects\LabelPrint\third_party\poppler" />
@@ -118,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734028798527</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added the ability to print lables and qr codes for the sink configurations, they do not work and are only referencing a fix folder. &#10;&#10;Need to fix pdf viewer &#10;Need to fix distribution on exe">
+      <option name="closed" value="true" />
+      <created>1734370921280</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734370921280</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +168,7 @@
     <MESSAGE value="Reinit project to new drive" />
     <MESSAGE value="added feature, view reports for sink configuration related to .lst files in the forming only folder" />
     <MESSAGE value="feature fix for viewing report and the badge associated with it. no dynamically updates the report for evey xml and the ablity to look at pdfs tho that is currentyl not workign the file is there. also add poppler will ignore this on commit but need to some how auto distribute for user and load the envirment variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature fix for viewing report and the badge associated with it. no dynamically updates the report for evey xml and the ablity to look at pdfs tho that is currentyl not workign the file is there. also add poppler will ignore this on commit but need to some how auto distribute for user and load the envirment variable" />
+    <MESSAGE value="Added the ability to print lables and qr codes for the sink configurations, they do not work and are only referencing a fix folder. &#10;&#10;Need to fix pdf viewer &#10;Need to fix distribution on exe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the ability to print lables and qr codes for the sink configurations, they do not work and are only referencing a fix folder. &#10;&#10;Need to fix pdf viewer &#10;Need to fix distribution on exe" />
   </component>
 </project>

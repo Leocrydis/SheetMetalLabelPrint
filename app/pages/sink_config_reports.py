@@ -36,6 +36,7 @@ def reports_page():
             report_preview = ui.html().classes('border-2 border-gray-500 rounded-md mb-2').style('width: 612px; height: 792px;')
             update_report_preview()  # Initial load
 
+            #ui.button('Generate Report', on_click=lambda: [generate_pdf(),ui.notify('PDF Generated', position='center', type='info')])
             # Reactively update SVG preview if storage changes
             ui.timer(1.0, update_report_preview)  # Poll for updates every second
 
@@ -112,11 +113,25 @@ def generate_svg() -> str:
     return output.getvalue().decode('utf-8')
 
 
-# Function to generate PDF (returns the file path to the saved PDF)
+#Function to generate PDF (returns the file path to the saved PDF)
 def generate_pdf() -> str:
-    pdf_path = os.path.join(OUTPUT_DIR, 'sink_configuration_report.pdf')  # Define the output path
+    #Base file name
+    base_filename = 'sink_configuration_report'
+    extension = '.pdf'
+
+    #Initialize the file path with the base name
+    pdf_path = os.path.join(OUTPUT_DIR, f"{base_filename}{extension}")
+
+    #Increment file name if it already exists
+    counter = 1
+    while os.path.exists(pdf_path):
+        pdf_path = os.path.join(OUTPUT_DIR, f"{base_filename}_{counter}{extension}")
+        counter += 1
+
+    #Generate the PDF
     with open(pdf_path, 'wb') as f:
         surface = cairo.PDFSurface(f, 612, 792)  # Letter size in points
         draw(surface)
         surface.finish()
-    return pdf_path  # Return the file path to the PDF
+
+    return pdf_path  # Return the final file path
