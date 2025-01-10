@@ -4,154 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="817235fd-03bf-4149-bdde-627ea7d315a7" name="Changes" comment="Fixed minor issues with csv label printing&#10;&#10;Need to fix pdf viewer &#10;Need to fix distribution on exe">
-      <change afterPath="$PROJECT_DIR$/Read Me.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/LabelPrint.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LabelPrint.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/header.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/header.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/events/location_breakdown.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/events/location_breakdown.py" afterDir="false" />
-    </list>
+    <list default="true" id="817235fd-03bf-4149-bdde-627ea7d315a7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <branch-grouping />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2pzjvEU2uIoMQyuU9IAavMC9y4g" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.label_test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pdf_viewer.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/PycharmProjects/LabelPrint&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
-  }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\PycharmProjects\LabelPrint\third_party\poppler" />
-      <recent name="D:\PycharmProjects\LabelPrint\app\data" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\PycharmProjects\LabelPrint\app\resource\archive" />
-      <recent name="D:\PycharmProjects\LabelPrint\app\utils" />
-      <recent name="D:\PycharmProjects\LabelPrint" />
-      <recent name="D:\PycharmProjects\LabelPrint\content" />
-      <recent name="D:\PycharmProjects\LabelPrint\icon" />
-    </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="817235fd-03bf-4149-bdde-627ea7d315a7" name="Changes" comment="" />
-      <created>1733776027021</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1733776027021</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Reinit project to new drive">
-      <option name="closed" value="true" />
-      <created>1733779600781</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1733779600781</updated>
-    </task>
-    <task id="LOCAL-00002" summary="added feature, view reports for sink configuration related to .lst files in the forming only folder">
-      <option name="closed" value="true" />
-      <created>1733934785874</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1733934785874</updated>
-    </task>
-    <task id="LOCAL-00003" summary="feature fix for viewing report and the badge associated with it. no dynamically updates the report for evey xml and the ablity to look at pdfs tho that is currentyl not workign the file is there. also add poppler will ignore this on commit but need to some how auto distribute for user and load the envirment variable">
-      <option name="closed" value="true" />
-      <created>1734028798527</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1734028798527</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added the ability to print lables and qr codes for the sink configurations, they do not work and are only referencing a fix folder. &#10;&#10;Need to fix pdf viewer &#10;Need to fix distribution on exe">
-      <option name="closed" value="true" />
-      <created>1734370921280</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1734370921280</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Fixed minor issues with csv label printing&#10;&#10;Need to fix pdf viewer &#10;Need to fix distribution on exe">
-      <option name="closed" value="true" />
-      <created>1734638038498</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1734638038498</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Reinit project to new drive" />
-    <MESSAGE value="added feature, view reports for sink configuration related to .lst files in the forming only folder" />
-    <MESSAGE value="feature fix for viewing report and the badge associated with it. no dynamically updates the report for evey xml and the ablity to look at pdfs tho that is currentyl not workign the file is there. also add poppler will ignore this on commit but need to some how auto distribute for user and load the envirment variable" />
-    <MESSAGE value="Added the ability to print lables and qr codes for the sink configurations, they do not work and are only referencing a fix folder. &#10;&#10;Need to fix pdf viewer &#10;Need to fix distribution on exe" />
-    <MESSAGE value="Fixed minor issues with csv label printing&#10;&#10;Need to fix pdf viewer &#10;Need to fix distribution on exe" />
-    <MESSAGE value="Fixed minor issues with csv label printing&#10;&#10;Need to fix pdf viewer&#10;Need to fix distribution on exe" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>
