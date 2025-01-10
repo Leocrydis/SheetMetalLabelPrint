@@ -1,5 +1,5 @@
 .venv
-.idea
+.idea/
 .nicegui
 /build/
 /dist/
