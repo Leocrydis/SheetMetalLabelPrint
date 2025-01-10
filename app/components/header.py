@@ -22,6 +22,7 @@ async def csv_file_selection():
     await file_path_breakdown()
     data_table.refresh()
     label_inputs_and_preview.refresh()
+    header_component.refresh()
 
 @ui.refreshable
 def header_component():

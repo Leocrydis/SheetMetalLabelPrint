@@ -126,8 +126,8 @@ async def file_path_breakdown():
     # Initialize the file path to the original .xml/.csv/.dxf file path
     file_path = original_file_path
 
-    # If in the specific `M:\\0-BOOST NC\\PR\\PINK-RUSH` directory and it's an .xml file, allow a .dxf selection
-    if "M:\\0-BOOST NC\\PR\\PINK-RUSH" in file_path and file_extension == '.xml':
+    # If in the specific `0-BOOST NC\\PR\\PINK-RUSH` directory and it's an .xml file, allow a .dxf selection
+    if "0-BOOST NC\\PR\\PINK-RUSH" in file_path and file_extension == '.xml':
         dxf_file_path = await select_dxf_file()
         if dxf_file_path:
             # Replace server path for the selected .dxf file
