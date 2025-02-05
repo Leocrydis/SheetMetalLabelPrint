@@ -1,0 +1,4 @@
+nicegui
+zpl
+tabulate
+pyinstaller

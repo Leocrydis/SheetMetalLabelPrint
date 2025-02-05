@@ -14,6 +14,3 @@ def startup():
             label_inputs_and_preview()
         with ui.row().classes('w-full h-full bg-gray-100'):
             await data_table()
-
-        process_sink_folder_reference()  # The default folder path will be used,
-        # or pass your preferred path like process_folder('your/custom/path')

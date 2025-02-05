@@ -6,8 +6,8 @@ a = Analysis(
     pathex=[],
     binaries=[],
     datas=[
-        ('D:\\PycharmProjects\\LabelPrint\\.venv\\Lib\\site-packages\\nicegui', 'nicegui'),
-        ('D:\\PycharmProjects\\LabelPrint\\include\\sad_face.svg', 'nicegui/static'),
+        ('E:\\PycharmProjects\\LabelPrint\\.venv\\Lib\\site-packages\\nicegui', 'nicegui'),
+        ('E:\\PycharmProjects\\LabelPrint\\include\\sad_face.svg', 'nicegui/static'),
     ],
     hiddenimports=[],
     hookspath=[],

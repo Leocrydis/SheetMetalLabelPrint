@@ -3,6 +3,9 @@ from tabulate import tabulate
 from nicegui import app
 
 def extract_nc_programs(func):
+    """
+    Extracts the NC programs from the XML content that is provided from Trumpf Boost and stores them in app.storage.general.
+    """
     async def wrapper (*args, **kwargs):
         xml_content = await func(*args, **kwargs)
         if xml_content is None:

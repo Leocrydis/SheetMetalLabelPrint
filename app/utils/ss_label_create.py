@@ -3,6 +3,11 @@ from nicegui import app
 import os
 
 def create_label(data, data_type, total_labels):
+    """
+    Import when adding the ZPL python package you need to change the class of the self __init__. As it is using
+    "*dpmm* refers to dots per millimeter (e.g. 12 for 300dpi)". 
+    We need to change it to be used for 200dpi which is 8 dpmm
+    """
     # Convert inches to millimeters (1 inch = 25.4 mm)
     label_width_mm = 4 * 25.4  # 4 inches wide
     label_height_mm = 1 * 25.4  # 1 inch tall

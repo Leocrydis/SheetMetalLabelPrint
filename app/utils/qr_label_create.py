@@ -76,12 +76,15 @@ def create_label(data, data_type, total_labels):
             l.write_text(text, char_height=5, char_width=5, line_width=text_width_mm, justification='C')
             l.endorigin()
         elif i == 1:  # Row 2 Column 1
+            column1_width = (2 / 3) * text_width_mm  # Two-thirds of the row
             l.origin(x_positions_row2[0] + 2, y_position)
-            l.write_text(text, char_height=4, char_width=4, line_width=(text_width_mm / 2), justification='L')
+            l.write_text(text, char_height=4, char_width=4, line_width=column1_width, justification='L')
             l.endorigin()
         elif i == 2:  # Row 2 Column 2
-            l.origin(x_positions_row2[0] + (text_width_mm / 2), y_position)
-            l.write_text(text, char_height=4, char_width=4, line_width=(text_width_mm / 2), justification='R')
+            column1_width = (2 / 3) * text_width_mm
+            column2_width = (1 / 3) * text_width_mm  # One-third of the row
+            l.origin(x_positions_row2[0] + column1_width, y_position)
+            l.write_text(text, char_height=4, char_width=4, line_width=column2_width, justification='R')
             l.endorigin()
         elif i == 3:  # Row 3 Column 1
             l.reverse_print(active='Y')

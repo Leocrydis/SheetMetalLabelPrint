@@ -150,13 +150,6 @@ async def on_print_selected():
     data_type = 'xml' if file_extension == '.xml' else 'csv'
     total_labels = len(selected_rows)
 
-    # Check for the .lst file only if the file extension is .xml
-    if file_extension == '.xml' and check_lst_file_exists():
-        lst_zpl_command = create_lst_label()  # This is skipped if .csv
-        zpl_commands.append(lst_zpl_command)
-    elif file_extension == '.xml':
-        ui.notify('No .lst file exists', position='center', type='warning')
-
     if file_extension == '.xml' and sheet_repeat_print:
         # Group labels by sheet number (last part of program_number)
         grouped_labels = {}
