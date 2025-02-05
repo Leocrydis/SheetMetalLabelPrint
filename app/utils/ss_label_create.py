@@ -4,7 +4,7 @@ import os
 
 def create_label(data, data_type, total_labels):
     """
-    Import when adding the ZPL python package you need to change the class of the self __init__. As it is using
+    Important when adding the ZPL python package you need to change the class of the self __init__. As it is using
     "*dpmm* refers to dots per millimeter (e.g. 12 for 300dpi)". 
     We need to change it to be used for 200dpi which is 8 dpmm
     """

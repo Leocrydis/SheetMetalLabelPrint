@@ -16,7 +16,7 @@ async def run_sink_configuration():
     unique_codes = list({data.get('unique_code', '') for data in table_data if data.get('unique_code', '')})
 
     if unique_codes:
-        exe_path = 'SE Sink Configuration.exe'
+        exe_path = os.path.abspath('Packages/se_sink_configuration/SE Sink Configuration.exe')
         unique_codes_str = ','.join(unique_codes)
         print(f"Debug: Executing {exe_path} with unique_codes = {unique_codes_str} and folder path = {folder_path}")
 
