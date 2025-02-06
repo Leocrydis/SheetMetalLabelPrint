@@ -1,4 +1,9 @@
 nicegui
 zpl
 tabulate
-pyinstaller
+pyinstallery
+pdfminer
+PyMuPDF
+pycairo
+pdf2image
+pywebview

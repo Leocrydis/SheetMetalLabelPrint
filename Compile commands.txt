@@ -1,3 +1,13 @@
+nicegui-pack --onefile --windowed --name "Label Print" main.py 
+
+pyinstaller --onefile --windowed --name "Label Print" main.py
+
+```
+
+pyinstaller "Label Print.spec"
+
+
+```
 # -*- mode: python ; coding: utf-8 -*-
 
 
@@ -6,8 +16,8 @@ a = Analysis(
     pathex=[],
     binaries=[],
     datas=[
-        ('E:\\VS Code Projects\\Label Print\\.venv\\Lib\\site-packages\\nicegui', 'nicegui'),
-        ('E:\\VS Code Projects\\Label Print\\include\\sad_face.svg', 'nicegui/static'),
+        ('C:\\Users\\ialvarez\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\nicegui', 'nicegui'),
+        ('splash.png', 'splash.png')  # Ensure the splash image is included
     ],
     hiddenimports=[],
     hookspath=[],
@@ -18,24 +28,12 @@ a = Analysis(
     optimize=0,
 )
 pyz = PYZ(a.pure)
-splash = Splash(
-    'include/splash.png',
-    binaries=a.binaries,
-    datas=a.datas,
-    text_pos=None,
-    text_size=12,
-    minify_script=True,
-    always_on_top=True,
-)
 
 exe = EXE(
     pyz,
     a.scripts,
-    a.binaries,
-    a.datas,
-    splash,
-    splash.binaries,
     [],
+    exclude_binaries=True,
     name='Label Print',
     debug=False,
     bootloader_ignore_signals=False,
@@ -43,13 +41,13 @@ exe = EXE(
     upx=True,
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=False,
+    console=False,  # This ensures the application runs in windowed mode
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon='include/label.ico'
+    splash='splash.png'  # Add the splash screen here
 )
 
 coll = COLLECT(

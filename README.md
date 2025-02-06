@@ -68,6 +68,10 @@ Follow these steps to set up the project locally:
    ```
 4. Configure additional settings if necessary.
 
+Once the requirements are installed, you may need to uninstall `pathlib`. Additionally, you will need to copy the `include`, `packages`, and `third_party` folders.
+
+To run the desktop app version, execute `main.py`. If you want to compile the application, you will need to update the `Label Print.spec` file to match your package locations. Refer to the compile commands for instructions on setting up a splash screen startup using the spec file with PyInstaller. Alternatively, you can use the two commands at the top of `Compile commands.txt` to create a single-file app configuration without the splash screen. The spec file installs two versions of the app: one as a single executable and another with a copy of the dependencies to reduce the likelihood of breaking.
+
 ---
 
 ## Usage
