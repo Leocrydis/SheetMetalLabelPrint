@@ -29,7 +29,8 @@ async def data_table():
         {'headerName': 'Tops Part Number', 'field': 'tops_part_number'},
         {'headerName': 'Quantity', 'field': 'quantity_on_sheet'},
         {'headerName': 'X of Y', 'field': 'x_of_y'},
-        {'headerName': 'Sink Config', 'field': 'sink_combined_configuration', 'hide': False}
+        {'headerName': 'Sink Config', 'field': 'sink_combined_configuration', 'hide': False},
+        {'headerName': 'Nomex Layers', 'field': 'Nomex Layers', 'hide': False},
     ]
 
     csv_columns = [

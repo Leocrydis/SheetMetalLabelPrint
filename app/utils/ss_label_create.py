@@ -1,6 +1,6 @@
+import os
 import zpl
 from nicegui import app
-import os
 
 def create_label(data, data_type, total_labels):
     """
@@ -104,8 +104,14 @@ def create_label(data, data_type, total_labels):
             l.endorigin()
         elif i == 5:  # Row 3 and 4 Column 2
             l.origin(x_positions_row3_4[1], y_position + 1)
-            l.write_text(text, char_height=8, char_width=8, line_width=label_width_mm - 28, justification='C')
+            when_nomex_justification = 'L' if data.get('Nomex Layers', '') else 'C'
+            l.write_text(text, char_height=8, char_width=8, line_width=label_width_mm - 28, justification=when_nomex_justification)
             l.endorigin()
+            nomex_layers = data.get('Nomex Layers', '')
+            if nomex_layers:
+                l.origin(x_positions_row3_4[1], y_position + 3)
+                l.write_text(f"Nomex Wrap: {nomex_layers}", char_height=4, char_width=4, line_width=label_width_mm - 28, justification='R')
+                l.endorigin()
             l.reverse_print(active='N')
         elif i == 6:  # Row 5
             l.origin(0, y_position)

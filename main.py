@@ -1,3 +1,6 @@
+"""
+This module initializes the NiceGUI application and handles startup and shutdown events.
+"""
 from nicegui import ui, app
 from app.startup import startup
 
@@ -8,15 +11,19 @@ except ImportError:
 
 app.on_startup(startup)
 
-# Close the splash screen after the startup function is called
 @app.on_startup
 def close_splash():
+    """
+    Close splash screen after the startup function is called
+    """
     if pyi_splash and pyi_splash.is_alive():
         pyi_splash.close()
 
-#When the app is closed shut down server, this is for when the app is native mode with no console to close the application
 @app.on_shutdown
 def shutdown():
+    """
+    Shutdown the server when the app is closed
+    """
     print("Shutting down the server...")
     app.shutdown()
 

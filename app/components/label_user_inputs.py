@@ -77,14 +77,11 @@ def label_inputs_and_preview():
                             app.storage.general['file_breakdown'], 'item_name'
                         ).classes('col-span-2 flex justify-center items-center').style('font-size: 14px;')
 
-                        ui.label(tppn_milmat_label
-                                 ).classes('pl-2 col-span-1 text-white bg-black').style('font-size: 12px;')
+                        ui.label(tppn_milmat_label).classes('pl-2 col-span-1 text-white bg-black').style('font-size: 12px;')
 
-                        ui.label(part_number_label
-                                 ).classes('flex justify-center items-center col-span-3 row-span-2 text-white bg-black').style('font-size: 16px;')
+                        ui.label(part_number_label).classes('flex justify-center items-center col-span-3 row-span-2 text-white bg-black').style('font-size: 16px;')
 
-                        ui.label(x_of_y_label
-                                 ).classes('pl-4 col-span-1 bg-black text-white').style('font-size: 10px;')
+                        ui.label(x_of_y_label).classes('pl-4 col-span-1 bg-black text-white').style('font-size: 10px;')
 
                         ui.label().bind_text(
                             app.storage.general['file_breakdown'], 'file_path'

@@ -25,7 +25,6 @@ async def run_get_nomex_layers():
         print(f"Debug: Executing {exe_path} with folder path = {folder_path} and unique_codes = {unique_codes_str}")
 
         try:
-            # Execute the EXE process
             process = await asyncio.create_subprocess_exec(
                 exe_path, folder_path, unique_codes_str,
                 stdout=subprocess.PIPE,
@@ -39,6 +38,18 @@ async def run_get_nomex_layers():
 
             output = stdout.decode().strip()
             print(f"EXE Output:\n{output}")
+
+            # Parse the output and update table_data
+            for line in output.split('\n'):
+                if "NOMEX_LAYERS:" in line:
+                    part_number, nomex_layers = line.split(": NOMEX_LAYERS: ")
+                    nomex_layers = nomex_layers.strip()  # Remove any extraneous whitespace characters
+                    for data in table_data:
+                        if data.get('unique_code') == part_number:
+                            data['Nomex Layers'] = nomex_layers
+
+            # Update the storage with the modified table_data
+            app.storage.general['xml_table'] = table_data
 
         except Exception as e:
             print(f"Error while executing the process: {str(e)}")

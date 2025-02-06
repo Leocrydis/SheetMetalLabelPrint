@@ -1,12 +1,15 @@
 from nicegui import ui,app
-from .table import data_table
-from .label_user_inputs import  label_inputs_and_preview
 from app.utils import select_xml_file, select_csv_file
 from app.events import file_path_breakdown, run_sink_configuration, run_get_nomex_layers
 from app.resource import process_sink_folder_reference
 from app.pages import reports_page, pdf_previewer
+from .table import data_table
+from .label_user_inputs import  label_inputs_and_preview
 
 async def xml_file_selection():
+    """
+    This function is called to run any other functins the is being driven by the xml file
+    """
     await select_xml_file()
     await file_path_breakdown()
     progress_dialog.open()
@@ -19,6 +22,9 @@ async def xml_file_selection():
     header_component.refresh()
 
 async def csv_file_selection():
+    """
+    This function is called to run any other functins the is being driven by the csv file
+    """
     await select_csv_file()
     await file_path_breakdown()
     data_table.refresh()
@@ -27,6 +33,9 @@ async def csv_file_selection():
 
 @ui.refreshable
 def header_component():
+    """
+    Header component for the application
+    """
     with ui.row().classes('w-full m-4'):
         with ui.button(icon='menu').classes('h-14'):
             ui.tooltip('Menu').classes('bg-green')
