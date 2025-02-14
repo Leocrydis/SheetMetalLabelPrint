@@ -5,8 +5,15 @@ from nicegui import app
 
 async def run_sink_configuration():
     file_path = app.storage.general.get('file_path', '')
-    folder_path = os.path.dirname(file_path)
+    dxf_file_path = app.storage.general.get('dxf_file_path', '')
     table_data = app.storage.general.get('xml_table', [])
+
+    # Determine which path to use
+    if "0-BOOST NC\\PR\\PINK-RUSH" in file_path and dxf_file_path:
+        # Use DXF path but remove the file name
+        folder_path = os.path.dirname(dxf_file_path)
+    else:
+        folder_path = os.path.dirname(file_path)
 
     if not folder_path or not table_data:
         print("Error: Missing folder path or table data!")

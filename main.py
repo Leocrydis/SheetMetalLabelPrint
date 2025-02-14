@@ -5,7 +5,7 @@ from nicegui import ui, app
 from app.startup import startup
 
 try:
-    import pyi_splash
+    import pyi_splash # type: ignore
 except ImportError:
     pyi_splash = None
 

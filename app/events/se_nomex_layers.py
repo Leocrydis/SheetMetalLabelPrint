@@ -9,8 +9,15 @@ async def run_get_nomex_layers():
     # TODO: Fix the SENomexLayers.exe to accept the arguments in the same position as the sink configuration exe
     """
     file_path = app.storage.general.get('file_path', '')
-    folder_path = os.path.dirname(file_path)
+    dxf_file_path = app.storage.general.get('dxf_file_path', '')
     table_data = app.storage.general.get('xml_table', [])
+
+    # Determine which path to use
+    if "0-BOOST NC\\PR\\PINK-RUSH" in file_path and dxf_file_path:
+        # Use DXF path but remove the file name
+        folder_path = os.path.dirname(dxf_file_path)
+    else:
+        folder_path = os.path.dirname(file_path)
 
     if not folder_path or not table_data:
         print("Error: Missing folder path or table data!")
@@ -43,7 +50,7 @@ async def run_get_nomex_layers():
             for line in output.split('\n'):
                 if "NOMEX_LAYERS:" in line:
                     part_number, nomex_layers = line.split(": NOMEX_LAYERS: ")
-                    nomex_layers = nomex_layers.strip()  # Remove any extraneous whitespace characters
+                    nomex_layers = nomex_layers.strip()
                     for data in table_data:
                         if data.get('unique_code') == part_number:
                             data['Nomex Layers'] = nomex_layers

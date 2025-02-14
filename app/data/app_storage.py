@@ -33,25 +33,13 @@ def save_data(key, data):
     with open('.nicegui/storage-general.json', 'w') as file:
         json.dump(app.storage.general, file, indent=4)
 
-def load_data():
-    try:
-        with open('.nicegui/storage-general.json', 'r') as file:
-            app.storage.general.update(json.load(file))
-    except FileNotFoundError:
-        initialize_storage()
-    except json.JSONDecodeError:
-        initialize_storage()
-
-def load_data_key(key):
-    return app.storage.general.get(key)
-
 # Load the JSON data if the file exists, otherwise initialize with default values
 if os.path.exists('.nicegui/storage-general.json'):
     with open('.nicegui/storage-general.json', 'r') as file:
         data = json.load(file)
 else:
     data = {
-         "xml_table": [],
+        "xml_table": [],
         "file_path": "",
         "csv_table": [],
         "file_breakdown": {
